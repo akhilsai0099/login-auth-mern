@@ -6,7 +6,10 @@ connectDB();
 const app = express();
 
 app.use(express.json());
+
+
 app.use('/api/auth', require('./routes/auth'));
+app.use('/api/private', require('./routes/private'));
 
 const PORT = 5000;
 
